@@ -1,0 +1,11 @@
+.card{
+    position: absolute;
+    top: 10%;
+    left: 35%;
+    right: 35%;
+    bottom: 20%;
+    font-size: 18px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+    /* background-color: aqua; */
+
+}

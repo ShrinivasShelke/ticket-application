@@ -1,0 +1,21 @@
+.Users{
+    height:10vh;
+    /* border:2px solid #ff0055 */
+    font-size: large;
+    padding: auto;
+}
+
+.UsersList{
+    display: flex;
+    flex-direction: row;
+
+}
+.Done{
+flex:1
+}
+.Inprogress{
+flex:1
+}
+.Todo{
+Flex:1
+}

@@ -1,0 +1,28 @@
+.sidebar {
+    margin-top: 70px;
+    justify-content: center;
+    font-size: x-large;
+    border-color:#1E90FF;
+}
+.sidebar div{
+    border: 1px solid #1E90FF;
+    border-radius: 4px;
+    background: #1E90FF;
+    color: white;
+    cursor: pointer;
+    margin-right: 1rem;
+    text-decoration: none;
+    display: inline-block;
+    width:12vw;
+    margin:8px;
+
+}
+
+
+
+.five{
+    width:12vw;
+    margin: 10px;
+    font-size: large;
+    margin-top: 72vh;
+} 

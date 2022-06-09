@@ -1,0 +1,35 @@
+.form {
+    margin: 150px auto;
+
+}
+
+h1 {
+    color: #1E90FF;
+}
+
+label {
+    margin: 20px;
+    font-size:larger;
+
+}
+
+input {
+    
+     width: 26vw;/*450px */
+    /* min-width: 200px; */
+    height: 30px;
+    margin: 5px;
+}
+
+::placeholder {
+   
+    font-size: 1.3em;
+  }
+
+.err-mesegge{
+    color: red;
+}
+/* .background{
+    background-image: url(/home/lnv116/Projects/project/src/util/pexels-hasan-albari-1229861.jpg);
+    
+} */

@@ -1,0 +1,9 @@
+.donelist{
+    list-style: none;
+    box-shadow: 0 2px 8px rgba(56, 149, 161, 0.795);
+    margin:2rem ;
+    font-family: 'Courier New', Courier, monospace;
+    height: 2rem;
+    padding: 1rem;
+
+}

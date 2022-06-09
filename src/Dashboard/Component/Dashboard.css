@@ -1,0 +1,30 @@
+.dashBoard{
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+   
+    
+}
+.SideBar_comp{
+    flex:1;
+}
+.two{
+    flex:7;
+    border:2px solid #1E90FF;
+    margin-top: 8vh;
+}
+.main-header {
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:#1E90FF;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.26);
+    padding: 0 1rem;
+    z-index: 5;
+  }
+  
+
