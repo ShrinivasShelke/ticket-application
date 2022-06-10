@@ -1,21 +1,34 @@
-.Users{
-    height:10vh;
-    /* border:2px solid #ff0055 */
+.Users {
+    height: 10vh;
     font-size: large;
     padding: auto;
 }
 
-.UsersList{
+.UsersList {
     display: flex;
     flex-direction: row;
+}
 
+.Done {
+    flex: 1;
+    background-color: #082642;
+    height:78vh;
+    border-radius: 1rem;
+    margin:1rem;
 }
-.Done{
-flex:1
+
+.Inprogress {
+    flex: 1;
+    background-color:  #082642;
+    height:78vh;
+    border-radius: 1rem;
+    margin:1rem;
 }
-.Inprogress{
-flex:1
-}
-.Todo{
-Flex:1
+
+.Todo {
+    Flex: 1;
+    background-color:  #082642;;
+    height:78vh;
+    border-radius: 1rem;
+    margin:1rem;
 }

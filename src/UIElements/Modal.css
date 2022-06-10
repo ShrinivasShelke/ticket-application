@@ -1,0 +1,56 @@
+.modelBackGround{
+    width:100vw;
+    height:100vh;
+    background-color: rgba(200, 200, 200,0.5);
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -16rem;
+    margin-top: -4rem;
+ 
+}
+.modelContainer{
+    width: 500px;
+    height:500px;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display:flex;
+    flex-direction: column;
+    padding: 25px;
+}
+
+.modelContainer .title{
+    display: inline-block;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.titleClose{
+    display: flex;
+    justify-content: flex-end;
+
+}
+.titleClose button{
+background-color: transparent;
+border:none;
+font-size: 25px;
+cursor:pointer;
+color: black;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.26);
+}
+
+.body button{
+    width: 150px;
+    height: 45px;
+    margin: 10px;
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+

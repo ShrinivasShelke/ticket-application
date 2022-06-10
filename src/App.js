@@ -4,9 +4,9 @@ import Login from "./Auth/Component/Login";
 import SignUp from "./Auth/Component/SignUp";
 import Dashboard from "./Dashboard/Component/Dashboard";
 
-function App() {
+function App(){
   return (
-    <div className="App">
+    <div className="App" >
       <Router>
         <Switch>
           <Route path='/' exact>

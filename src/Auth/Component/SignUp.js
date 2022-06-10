@@ -12,12 +12,10 @@ const SignUp = () => {
     const [Email, setEmail] = useState('')
     const history = useHistory();
    
-
     const onChangeUser = (e) => {
         setName(e.target.value)
     }
-   
-
+    
     const onChangePassword = (e) => {
         setPassword(e.target.value)
     }
@@ -31,8 +29,7 @@ const SignUp = () => {
         console.log(Name,Password,Email)
         history.push("/");
     }
-
-
+    
     return (<>
         <h1 >Thinkitive</h1>
         <Card>

@@ -10,13 +10,8 @@ const Dashboard = () => {
     <div className="main-header"><UsersBar/></div>
     <main>
     <div className="dashBoard">
-    <div className="SideBar_comp">
-    <SideBar/>
-    </div>
-    <div className="two">
-        <MainUserPage/>
-    </div>
-   
+    <div className="sideBar_comp"><SideBar/></div>
+    <div className="two"><MainUserPage/></div>
     </div>
     </main>
     </>)

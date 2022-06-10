@@ -3,6 +3,7 @@
     justify-content: center;
     font-size: x-large;
     border-color:#1E90FF;
+    font-family: Garamond, serif;
 }
 .sidebar div{
     border: 1px solid #1E90FF;
@@ -15,11 +16,7 @@
     display: inline-block;
     width:12vw;
     margin:8px;
-
 }
-
-
-
 .five{
     width:12vw;
     margin: 10px;

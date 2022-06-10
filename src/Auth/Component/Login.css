@@ -1,35 +1,36 @@
 .form {
     margin: 150px auto;
-
 }
 
-h1 {
+h1{
     color: #1E90FF;
+    font-size: 3rem;
 }
 
-label {
+label{
     margin: 20px;
     font-size:larger;
-
 }
 
-input {
-    
-     width: 26vw;/*450px */
-    /* min-width: 200px; */
+input{
+    width: 26vw;
     height: 30px;
     margin: 5px;
 }
 
-::placeholder {
-   
-    font-size: 1.3em;
-  }
+::placeholder{
+   font-size: 1.3em;
+}
 
 .err-mesegge{
     color: red;
 }
-/* .background{
-    background-image: url(/home/lnv116/Projects/project/src/util/pexels-hasan-albari-1229861.jpg);
-    
-} */
+
+body{ 
+    background: url('/home/lnv116/Projects/project/src/Util/pexels-hasan-albari-1229861.jpg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+} 
+

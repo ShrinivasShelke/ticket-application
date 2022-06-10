@@ -2,108 +2,100 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Button from "../../UIElements/Button";
 import Card from "../../UIElements/Card";
-import "./Login.css"
-
-
+import "./Login.css";
 
 const Login = () => {
-    const [Name, setName] = useState("");
-    const [Password, setpassword] = useState('');
-    const [NameError,setNameErrors]=useState('');
-    const [PasswordError,setPasswordErrors]=useState('')
-    const [SuccesMsg,setSuccesMsg]=useState('')
-    const history = useHistory();
+  const [name, setName] = useState("");
+  const [password, setpassword] = useState("");
+  const [nameError, setNameErrors] = useState("");
+  const [passwordError, setPasswordErrors] = useState("");
 
-    const users = 
-        { id: '1', username: 'admin', password: 'admin' }
-    
+  const history = useHistory();
 
-    const onChangeUser = (e) => {
-        setName(e.target.value)
-        setNameErrors('')
-        setSuccesMsg('')
-    }
-   
+  const users = { id: "1", username: "admin", passwords: "admin" };
+  const onChangeUser = (e) => {
+    setName(e.target.value);
+    setNameErrors("");
+  };
+  const onChangePassword = (e) => {
+    setpassword(e.target.value);
+    setPasswordErrors("");
+  };
 
-    const onChangePassword = (e) => {
-        setpassword(e.target.value)
-        setPasswordErrors('')
-        setSuccesMsg('')
-    }
-    // console.log(Password)
-    
-    const onSubmitLogin = (e) => {
-        e.preventDefault();
-        if(Name !== ""){
-
+  const onSubmitLogin = (e) => {
+    e.preventDefault();
+    if (name !== "") {
+      const nameRgx = /^[a-zA-Z ]{2,30}$/;
+      if (nameRgx.test(name)) {
+        setNameErrors("");
+        if (users.username === name) {
+          setNameErrors("");
+          if (users.passwords === password) {
+            setPasswordErrors("");
+          } else {
+            setPasswordErrors("password is invalid");
+          }
+        } else {
+          setNameErrors("username does not match with our database");
         }
-        else{
-            setNameErrors('usermane is invalid')
-        }
-
-        if(Password !== ""){
-
-        }
-        else{
-            setPasswordErrors('Password is invalid')
-        }
-
-
-
-
-
-
-
-       if(users.username===Name && users.password===Password){
-        history.push("/dashboard");
-       }
-    //    else{
-    //        alert("invalid Username or password")
-    //    }
+      } else {
+        setNameErrors("username is invalid");
+      }
+    } else {
+      setNameErrors("usermane is required");
     }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    const toSignUpForm=()=>{
-        history.push("/signUp");
-    
+    if (password !== "") {
+    } else {
+      setPasswordErrors("Password is invalid");
     }
 
-
-    return (
-        <>
-        
-        <h1 >Thinkitive</h1>
-        <Card>
-            
+    if (users.username === name && users.passwords === password) {
+      history.push("/dashboard");
+    }
+  };
+  const toSignUpForm = () => {
+    history.push("/signUp");
+  };
+  return (
+    <>
+      {" "}
+      <div className="title">
+        <h1>Thinkitive</h1>
+      </div>
+      <Card>
         <form onSubmit={onSubmitLogin} className="form">
-            <label htmlFor="username">Username </label>
-            <input type='text' name="username" id="username" onChange={onChangeUser} placeholder="Enter UserName" value={Name}/><br /><br />
-            {NameError &&<div  className="err-mesegge">{NameError}</div>}
-            <label htmlFor="password">Password</label>
-            
-            <input type='password' name="password" id="password" onChange={onChangePassword} placeholder="Enter Password" value={Password}/><br /><br />
-            {PasswordError &&<div className="err-mesegge">{PasswordError}</div>}
-            <Button type='submit'>Login</Button>
-            <Button type="button" onClick={toSignUpForm}>Sign Up</Button>
-
-
+          <label htmlFor="username">Username </label>
+          <input
+            type="text"
+            name="username"
+            id="username"
+            onChange={onChangeUser}
+            placeholder="Enter UserName"
+            value={name}
+          />
+          <br />
+          <br />
+          {nameError && <div className="err-mesegge">{nameError}</div>}
+          <label htmlFor="password">Password</label>
+          <input
+            type="password"
+            name="password"
+            id="password"
+            onChange={onChangePassword}
+            placeholder="Enter Password"
+            value={password}
+          />
+          <br />
+          <br />
+          {passwordError && <div className="err-mesegge">{passwordError}</div>}
+          <Button type="submit">Login</Button>
+          <Button type="button" onClick={toSignUpForm}>
+            Sign Up
+          </Button>
         </form>
-        </Card>
-   
-        </>
-    )
-}
+      </Card>
+    </>
+  );
+};
 export default Login;

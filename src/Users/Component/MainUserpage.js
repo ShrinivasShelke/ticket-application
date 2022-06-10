@@ -1,30 +1,33 @@
-import React from "react"
+import React, { useState } from "react"
 import Done from "../List/Done";
 import Inprogress from "../List/Inprogress";
 import Todo from "../List/Todo";
 import "./main.css"
 import UserName from "./UserName";
 
-const MainUserPage=()=>{
+const MainUserPage = () => {
+    const[completed,setCompleted]=useState([])
 
-
-    const ram=[
-        {id:1,title:'Done',data:"creating Ui For Login page Is Done"},
-        {id:2,title:'Inprogress',data:"creating Ui For Login page Is inprogress"},
-        {id:3,title:'Todo',data:"creating Ui For Login page Is Todo"}
-        ]
-
-
-     return(
+    const onRamDataHandler = (previous) => {
+        setCompleted(previous)
+    }
+    const onShyamDataHandler=(previous)=>{
+         setCompleted(previous)
+    }  
+    const onKrishnaDataHandler=(previous)=>{
+        setCompleted(previous)
+    }  
+    
+    return (
         <>
-        <div className="container">
-        <div className="Users"><UserName/></div>
-        <div className="UsersList">
-            <div className="Done" ><Done ram={ram}/></div>
-            <div className="Inprogress"><Inprogress/></div>
-            <div className="Todo"><Todo/></div>
-        </div>
-        </div>
+            <div className="container">
+                <div className="Users" ><UserName onRamData={onRamDataHandler} shyamData={onShyamDataHandler} krishnaData={onKrishnaDataHandler}/></div>
+                <div className="UsersList">
+                    <div className="Todo"    ><Todo completed={completed}/></div>
+                    <div className="Inprogress"><Inprogress completed={completed} /></div>
+                    <div className="Done" ><Done completed={completed}/></div>
+                </div>
+            </div>
         </>
     )
 }

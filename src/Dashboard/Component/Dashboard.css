@@ -2,15 +2,12 @@
     display: flex;
     flex-direction: row;
     height: 100vh;
-   
-    
 }
-.SideBar_comp{
+.sideBar_comp{
     flex:1;
 }
 .two{
     flex:7;
-    border:2px solid #1E90FF;
     margin-top: 8vh;
 }
 .main-header {
